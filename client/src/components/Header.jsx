@@ -27,23 +27,11 @@ function Header() {
                     <NavbarToggle/>
                 </div>
         
-            <NavbarCollapse>
-                        <NavbarLink active={path === "/"} as={"div"}>
-                            <Link to="/">
-                                Home
-                            </Link>
-                        </NavbarLink>
-                        <NavbarLink active={path === "/about"} as={"div"}>
-                            <Link to="/about">
-                               About
-                            </Link>
-                        </NavbarLink>
-                        <NavbarLink>
-                            <Link to="/projects" active={path === "projects"} as={"div"}>
-                              Projects
-                            </Link>
-                        </NavbarLink>
-                    </NavbarCollapse>
+ <NavbarCollapse>
+    <NavbarLink as={Link} to="/" active={path === "/"}>Home</NavbarLink>
+    <NavbarLink as={Link} to="/about" active={path === "/about"}>About</NavbarLink>
+  <NavbarLink as={Link} to="/projects" active={path.startsWith("/projects")}>Projects</NavbarLink>
+</NavbarCollapse>
          </Navbar>
   )
 }
