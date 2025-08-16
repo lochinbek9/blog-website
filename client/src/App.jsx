@@ -11,9 +11,11 @@ import FooterCom from "./components/Footer"
 
 function App() {
   return (
-    <BrowserRouter>
+   
+     <BrowserRouter>
     <Header/>
-        <Routes>
+      <main>
+      <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/sign-in" element={<SignIn/>}/>
@@ -21,6 +23,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/projects" element={<Projects/>}/>
         </Routes>
+      </main>
         <FooterCom/>
     </BrowserRouter>
    
