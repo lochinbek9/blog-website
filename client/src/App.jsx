@@ -12,7 +12,7 @@ import FooterCom from "./components/Footer"
 function App() {
   return (
    
-     <BrowserRouter>
+    <BrowserRouter>
     <Header/>
       <main>
       <Routes>
