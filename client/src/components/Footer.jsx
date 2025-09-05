@@ -8,10 +8,10 @@ function FooterCom() {
     <Footer container className="border border-t-8 border-teal-500">
         <div className="w-full max-w-7xl mx-auto">
             <div className="grid w-full justify-between sm:flex md:grid-cols-1">
-                <div className="mt-5">
-                <Link to="/" className="font-bold text-xl">
+                <div className=" mt-5">
+                <Link to="/" className="font-bold text-2xl">
                     <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
-                    rounded-lg">LODE-X'</span>
+                    rounded-lg text-white">LODE-X'</span>
                     BLOG
                 </Link>
                 </div>

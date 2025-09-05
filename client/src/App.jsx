@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -7,26 +7,29 @@ import SignUp from "./pages/SignUp"
 import Dashboard from "./pages/Dashboard"
 import Projects from "./pages/Projects"
 import Header from "./components/Header"
+import PrivateRoute from "./components/PrivateRoute"
 import FooterCom from "./components/Footer"
 
 function App() {
   return (
-   
+
     <BrowserRouter>
-    <Header/>
-      <main>
+      <Header />
+
       <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/sign-in" element={<SignIn/>}/>
-          <Route path="/sign-up" element={<SignUp/>}/>
-          <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/projects" element={<Projects/>}/>
-        </Routes>
-      </main>
-        <FooterCom/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+
+      <FooterCom />
     </BrowserRouter>
-   
+
   )
 }
 
